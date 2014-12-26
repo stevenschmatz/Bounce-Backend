@@ -51,3 +51,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# File watcher
+*/Gemfile.lock
