@@ -26,7 +26,7 @@ def serve_static_website():
 
     return "<h2>Hello World! This is the Bounce website.</h2>"
 
-@app.route("/multiply/<int:x>/<int:y>")
+@app.route("/multiply/<int:x>/<int:y>/")
 def serve_their_username(x, y):
     """Just returns the username given.
 
