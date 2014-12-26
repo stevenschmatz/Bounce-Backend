@@ -9,7 +9,7 @@ app.config['DEBUG'] = True
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! This is the Bounce website.'
+    return '<h1>Hello World! This is the Bounce website.</h1>'
 
 
 @app.errorhandler(404)
