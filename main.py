@@ -6,7 +6,7 @@ main.py initializes the backend server for Bounce Messaging. This hosts the
 static website, as well as the private REST API used by the mobile app.
 """
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -24,10 +24,10 @@ def serve_static_website():
     	A sample HTML response.
     """
 
-    return "<h2>Hello World! This is the Bounce website.</h2>"
+    return render_template("index.html")
 
-@app.route("/multiply/<int:x>/<int:y>/")
-def serve_their_username(x, y):
+@app.route("/multiply/<int:first_value>/<int:second_value>/")
+def serve_their_username(first_value, second_value):
     """Just returns the username given.
 
     Args:
@@ -37,9 +37,9 @@ def serve_their_username(x, y):
     	An HTML response containing the username.
     """
 
-    return "<h1>{}</h1>".format(x * y)
+    return "<h1>{}</h1>".format(first_value * second_value)
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error):
     """Return a custom 404 error."""
-    return e, 404
+    return error, 404
