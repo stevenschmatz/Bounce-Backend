@@ -24,7 +24,7 @@ def serve_static_website():
     	A sample HTML response.
     """
 
-    return render_template("index.html")
+    return render_template("html/index.html")
 
 @app.route("/multiply/<int:first_value>/<int:second_value>/")
 def serve_their_username(first_value, second_value):
