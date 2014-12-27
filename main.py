@@ -7,24 +7,13 @@ static website, as well as the private REST API used by the mobile app.
 """
 
 from flask import Flask, render_template
+from website.website import website_blueprint
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="website/static", 
+            template_folder="website/templates")
 app.config["DEBUG"] = True
 
-@app.route("/")
-def serve_static_website():
-    """Serves the static HTML landing page.
-
-    Serves the website from /app/static.
-
-    Args:
-    	none
-
-    Returns:
-    	A sample HTML response.
-    """
-
-    return render_template("html/index.html")
+app.register_blueprint(website_blueprint)
 
 @app.route("/multiply/<int:first_value>/<int:second_value>/")
 def serve_their_username(first_value, second_value):
