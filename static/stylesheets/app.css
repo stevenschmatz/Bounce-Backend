@@ -1,3 +1,8 @@
+/* line 1, ../../templates/scss/_landing-page.scss */
+#bounce_title {
+  text-align: center;
+}
+
 /* line 347, ../../templates/bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.0/";
