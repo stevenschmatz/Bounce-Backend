@@ -9060,7 +9060,11 @@ body {
   font-family: "Raleway", sans-serif;
   padding: 10px;
 }
-/* line 17, ../../templates/scss/_landing-page.scss */
+/* line 16, ../../templates/scss/_landing-page.scss */
+#bounce_title h2 span {
+  font-weight: bold;
+}
+/* line 21, ../../templates/scss/_landing-page.scss */
 #bounce_title img {
   padding-top: 25vh;
   font-size: 10em;
@@ -9068,7 +9072,7 @@ body {
   -webkit-filter: drop-shadow(1.5px 1.5px 1.5px #111);
   filter: drop-shadow(1.5px 1.5px 1.5px #111);
 }
-/* line 25, ../../templates/scss/_landing-page.scss */
+/* line 29, ../../templates/scss/_landing-page.scss */
 #bounce_title a.button {
   font-family: "Raleway", sans-serif;
   margin-top: 5vh;
