@@ -9044,7 +9044,7 @@ th.hide-for-touch {
 }
 /* line 1, ../../templates/scss/_landing-page.scss */
 body {
-  background-image: url("../resources/images/sunset-pier.jpg") !important;
+  background-image: url("../resources/images/city.jpg") !important;
   background-size: cover;
   min-width: 100% !important;
   min-height: 100% !important;
@@ -9065,8 +9065,11 @@ body {
   padding-top: 25vh;
   font-size: 10em;
   padding-bottom: 0;
+  -webkit-filter: drop-shadow(1.5px 1.5px 1.5px #111);
+  filter: drop-shadow(1.5px 1.5px 1.5px #111);
 }
-/* line 23, ../../templates/scss/_landing-page.scss */
+/* line 25, ../../templates/scss/_landing-page.scss */
 #bounce_title a.button {
   font-family: "Raleway", sans-serif;
+  margin-top: 5vh;
 }

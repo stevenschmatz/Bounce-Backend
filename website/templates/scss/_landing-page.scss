@@ -1,5 +1,5 @@
 body {
-	background-image: url("../resources/images/sunset-pier.jpg") !important;
+	background-image: url("../resources/images/city.jpg") !important;
 	background-size: cover;
 
 	min-width: 100% !important;
@@ -8,7 +8,7 @@ body {
 
 #bounce_title {
 
-	h2 {
+	h2  {
 		color: white;
 		font-family: "Raleway", sans-serif;
 		padding: 10px;
@@ -18,10 +18,13 @@ body {
 		padding-top: 25vh;
 		font-size: 10em;
 		padding-bottom: 0;
+		-webkit-filter: drop-shadow(1.5px 1.5px 1.5px #111);
+    	filter:         drop-shadow(1.5px 1.5px 1.5px #111); 
 	}
 
 	a.button {
 		font-family: "Raleway", sans-serif;
+		margin-top: 5vh;
 	}
 
 	text-align: center;
