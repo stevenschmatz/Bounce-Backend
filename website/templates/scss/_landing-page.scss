@@ -1,3 +1,28 @@
+body {
+	background-image: url("../resources/images/sunset-pier.jpg") !important;
+	background-size: cover;
+
+	min-width: 100% !important;
+	min-height: 100% !important;
+}
+
 #bounce_title {
+
+	h2 {
+		color: white;
+		font-family: "Raleway", sans-serif;
+		padding: 10px;
+	}
+
+	img {
+		padding-top: 25vh;
+		font-size: 10em;
+		padding-bottom: 0;
+	}
+
+	a.button {
+		font-family: "Raleway", sans-serif;
+	}
+
 	text-align: center;
 }
