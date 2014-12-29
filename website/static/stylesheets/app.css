@@ -9043,7 +9043,7 @@ th.hide-for-touch {
   }
 }
 /* line 1, ../../templates/scss/_landing-page.scss */
-body.city_background {
+.city_background {
   background-image: url("../resources/images/city.jpg") !important;
   background-size: cover;
   min-width: 100% !important;
