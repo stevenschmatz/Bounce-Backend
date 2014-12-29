@@ -19,6 +19,21 @@ def serve_index_html():
 
     return render_template("html/index.html")
 
+@website_blueprint.route("/api/")
+def api():
+    """Serves the root page for the API.
+
+    Executes the template from /website/static/html
+
+    Args:
+        none
+
+    Returns:
+        The rendered template of the HTML API landing page.
+    """
+
+    return render_template("html/api.html")
+
 @website_blueprint.errorhandler(404)
 def page_not_found(error):
     """Return a custom 404 error.
