@@ -3,11 +3,11 @@
 # Silences ndb import warning
 # pylint: disable=F0401
 
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request
 from google.appengine.ext import ndb
 from api.users.user import User
 
-api_blueprint = Blueprint("api_blueprint", __name__)
+users_blueprint = Blueprint("users_blueprint", __name__)
 
 MINIMUM_PASSWORD_LENGTH = 8
 
@@ -24,7 +24,7 @@ def username_is_valid(username):
         A boolean, representing whether the username is valid or not.
     """
 
-    print "Tested if username is valid"
+    print "Tested if {} is valid".format(username)
 
     return True
 
@@ -43,7 +43,7 @@ def password_is_valid(password):
 
     return len(password) >= MINIMUM_PASSWORD_LENGTH
 
-@api_blueprint.route("/api/users", methods=["POST"])
+@users_blueprint.route("/api/users", methods=["POST"])
 def new_user():
     """Creates a new user with the given credenti
     Creates a new user, if and only if the following criteria are satisfied:
