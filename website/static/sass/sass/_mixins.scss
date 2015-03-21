@@ -1,0 +1,22 @@
+@mixin fullscreen {
+    height: 100vw;
+    width: 100vh;
+}
+
+@mixin half-screen {
+    width: 30vw;
+    height: 100vh;
+
+    float: left;
+}
+
+@mixin no-margin-padding {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin drop-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}

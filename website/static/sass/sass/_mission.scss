@@ -1,0 +1,34 @@
+.triangle {
+    background: url('/static/images/triangle.png') center top no-repeat;
+    background-size: 60px auto;
+
+    width: 100vw;
+    height: 50px;
+    @include no-margin-padding;
+}
+
+section.mission {
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 8%;
+
+    $shadow: 0px 10px 0px 0px rgba(107,107,107,1);
+    @include drop-shadow($shadow);
+}
+
+section.mission h1 {
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    font-size: 50pt;
+    font-weight: 800;
+}
+
+section.mission h2 {
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    font-size: 30pt;
+    font-weight: 300;
+}
+
+section.mission h2 > span {
+    color: $bounce-red;
+    font-weight: 800;
+}

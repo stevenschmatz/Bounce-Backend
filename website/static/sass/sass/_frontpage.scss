@@ -1,0 +1,56 @@
+section.page.front {
+    display: table;
+    width: 100vw;
+
+    background-color: $bounce-red;
+}
+
+section.front-page-content {
+    height: 85vh;
+    display: table-row;
+}
+
+section.front-page-content > figure {
+    display: table-cell;
+
+    background: url('/static/images/phones.png') center center no-repeat;
+    background-size: 60% auto;
+
+    width: 50vw;
+    @include no-margin-padding;
+}
+
+section.front-page-content > figcaption {
+    display: table-cell;
+
+    width: 50vw;
+    @include no-margin-padding;
+    padding-top: 25vh;
+}
+
+@mixin _caption-image($url) {
+    background:url($url) left center no-repeat;
+    background-size: 70% auto;
+    width: 50vw;
+    height: 15vh;
+}
+
+.caption.logo {
+    @include _caption-image('/static/images/bounce-logo.png');
+
+    margin-bottom: 2vh;
+}
+
+.caption.slogan {
+    @include _caption-image('/static/images/bounce-caption.png');
+
+    margin-bottom: 5vh;
+}
+
+section.page.front > footer {
+    height: 8vh;
+}
+
+button.signup {
+    margin: 0;
+}

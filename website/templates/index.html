@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="js no-touch">
+  <head>
+    <title>Bounce</title>
+    <link rel="stylesheet" type="text/css" href="/static/sass/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/sass/stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="/static/sass/stylesheets/component.css">
+    <link rel="icon" type="image/icon" href="/static/images/favicon.png">
+    <script src="/static/js/modernizr.custom.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>function pageScroll() {$('html, body').animate({scrollTop: $("#theForm").offset().top}, 1000);}</script>
+    <section class="page front">
+      <section class="front-page-content">
+        <figure></figure>
+        <figcaption>
+          <div class="caption logo"></div>
+          <div class="caption slogan"></div>
+          <button onclick="pageScroll()" class="btn btn-2 btn-2a signup">STAY UPDATED</button>
+        </figcaption>
+      </section>
+      <footer></footer>
+    </section>
+    <section class="mission">
+      <div class="triangle"></div>
+      <h1>THINGS WE CARE ABOUT</h1>
+      <h2>We aim to make it <span>safer </span>and <span>easier </span>for you to get home.</h2>
+      <h2>You should be independent with your social life.</h2>
+    </section>
+    <section class="page form">
+      <h1>KEEP IN TOUCH</h1>
+      <div class="container">
+        <section>
+          <form id="theForm" autocomplete="off" class="simform">
+            <div class="simform-inner">
+              <ol class="questions">
+                <li><span>
+                    <label for="q1">What's your email?</label></span>
+                  <input id="q1" name="q1" type="text">
+                </li>
+              </ol>
+              <button type="submit" class="submit">Send answers</button>
+              <div class="controls">
+                <button class="next"></button>
+                <div class="progress"></div><span class="number"><span class="number-current"></span><span class="number-total"></span></span><span class="error-message"></span>
+              </div>
+            </div><span class="final-message"></span>
+          </form>
+        </section>
+      </div>
+      <footer>
+        <ul>
+          <li class="facebook"><a href="https://www.facebook.com/getbounceapp"><img src="/static/images/facebook.png"></a></li>
+          <li class="angellist"><a href="https://angel.co/bounce-7"><img src="/static/images/angellist.png"></a></li>
+          <li class="twitter"><a href="https://twitter.com/getbouncehome"><img src="/static/images/twitter.png"></a></li>
+        </ul>
+      </footer>
+    </section>
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/stepsForm.js"></script>
+    <script src="/static/js/product.js"></script>
+  </body>
+</html>

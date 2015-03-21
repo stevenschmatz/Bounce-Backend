@@ -1,0 +1,52 @@
+section.page.form {
+    background-color: $bounce-red;
+    width: 100vw;
+    padding-top: 5vh;
+}
+
+section.page.form > h1 {
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 50pt;
+    font-weight: 900;
+    color: white;
+    padding-bottom: 0;
+    margin-bottom: 10vh;
+}
+
+section.page.form > footer {
+    width: 100vw;
+    height: 19vh;
+    background-color: #C5433F;
+
+    margin: 0;
+    padding: 0;
+
+    bottom: 0;
+}
+
+form {
+    margin-bottom: 20vh !important;
+}
+
+footer > ul {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    padding-top: 6vh;
+}
+
+footer > ul > li {
+    display: inline-block;
+}
+
+footer > ul > li > a > img {
+    width: 8vh;
+    padding: 0 5px;
+    opacity: 0.5;
+}
+
+a > img:hover {
+    cursor: pointer;
+}

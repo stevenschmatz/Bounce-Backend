@@ -1,0 +1,165 @@
+/* line 1, ../sass/_frontpage.scss */
+section.page.front {
+  display: table;
+  width: 100vw;
+  background-color: #f0524e;
+}
+
+/* line 8, ../sass/_frontpage.scss */
+section.front-page-content {
+  height: 85vh;
+  display: table-row;
+}
+
+/* line 13, ../sass/_frontpage.scss */
+section.front-page-content > figure {
+  display: table-cell;
+  background: url("/static/images/phones.png") center center no-repeat;
+  background-size: 60% auto;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, ../sass/_frontpage.scss */
+section.front-page-content > figcaption {
+  display: table-cell;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+  padding-top: 25vh;
+}
+
+/* line 38, ../sass/_frontpage.scss */
+.caption.logo {
+  background: url("/static/images/bounce-logo.png") left center no-repeat;
+  background-size: 70% auto;
+  width: 50vw;
+  height: 15vh;
+  margin-bottom: 2vh;
+}
+
+/* line 44, ../sass/_frontpage.scss */
+.caption.slogan {
+  background: url("/static/images/bounce-caption.png") left center no-repeat;
+  background-size: 70% auto;
+  width: 50vw;
+  height: 15vh;
+  margin-bottom: 5vh;
+}
+
+/* line 50, ../sass/_frontpage.scss */
+section.page.front > footer {
+  height: 8vh;
+}
+
+/* line 54, ../sass/_frontpage.scss */
+button.signup {
+  margin: 0;
+}
+
+/* line 1, ../sass/_mission.scss */
+.triangle {
+  background: url("/static/images/triangle.png") center top no-repeat;
+  background-size: 60px auto;
+  width: 100vw;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/_mission.scss */
+section.mission {
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 8%;
+  -webkit-box-shadow: 0px 10px 0px 0px #6b6b6b;
+  -moz-box-shadow: 0px 10px 0px 0px #6b6b6b;
+  box-shadow: 0px 10px 0px 0px #6b6b6b;
+}
+
+/* line 19, ../sass/_mission.scss */
+section.mission h1 {
+  font-family: 'Lato', 'Helvetica', 'Arial';
+  font-size: 50pt;
+  font-weight: 800;
+}
+
+/* line 25, ../sass/_mission.scss */
+section.mission h2 {
+  font-family: 'Lato', 'Helvetica', 'Arial';
+  font-size: 30pt;
+  font-weight: 300;
+}
+
+/* line 31, ../sass/_mission.scss */
+section.mission h2 > span {
+  color: #f0524e;
+  font-weight: 800;
+}
+
+/* line 1, ../sass/_form.scss */
+section.page.form {
+  background-color: #f0524e;
+  width: 100vw;
+  padding-top: 5vh;
+}
+
+/* line 7, ../sass/_form.scss */
+section.page.form > h1 {
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 50pt;
+  font-weight: 900;
+  color: white;
+  padding-bottom: 0;
+  margin-bottom: 10vh;
+}
+
+/* line 17, ../sass/_form.scss */
+section.page.form > footer {
+  width: 100vw;
+  height: 19vh;
+  background-color: #C5433F;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+}
+
+/* line 28, ../sass/_form.scss */
+form {
+  margin-bottom: 20vh !important;
+}
+
+/* line 32, ../sass/_form.scss */
+footer > ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 6vh;
+}
+
+/* line 40, ../sass/_form.scss */
+footer > ul > li {
+  display: inline-block;
+}
+
+/* line 44, ../sass/_form.scss */
+footer > ul > li > a > img {
+  width: 8vh;
+  padding: 0 5px;
+  opacity: 0.5;
+}
+
+/* line 50, ../sass/_form.scss */
+a > img:hover {
+  cursor: pointer;
+}
+
+/* line 7, ../sass/styles.scss */
+html, body {
+  height: 100vw;
+  width: 100vh;
+  margin: 0;
+  padding: 0;
+}

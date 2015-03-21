@@ -1,0 +1,63 @@
+doctype html
+html(lang='en' class='js no-touch')
+    head
+        title Bounce
+        link(rel='stylesheet' type='text/css' href='/static/sass/stylesheets/styles.css')
+        link(rel='stylesheet' type='text/css' href='/static/sass/stylesheets/default.css')
+        link(rel='stylesheet' type='text/css' href='/static/sass/stylesheets/component.css')
+        link(rel='icon' type='image/icon' href='/static/images/favicon.png')
+        script(src="/static/js/modernizr.custom.js")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    body
+        script function pageScroll() {$('html, body').animate({scrollTop: $("#theForm").offset().top}, 1000);}
+        section.page.front
+            section.front-page-content
+                figure
+                figcaption
+                    .caption.logo
+                    .caption.slogan
+                    button.btn.btn-2.btn-2a.signup(onclick='pageScroll()') STAY UPDATED
+            footer
+        section.mission
+            .triangle
+            h1 THINGS WE CARE ABOUT
+            h2 We aim to make it 
+                span safer 
+                | and 
+                span easier 
+                | for you to get home.
+            h2 You should be independent with your social life.
+        section.page.form
+            h1 KEEP IN TOUCH
+            .container
+                  section
+                    form#theForm.simform(autocomplete='off')
+                      .simform-inner
+                        ol.questions
+                          li
+                            span
+                              label(for='q1') What's your email?
+                            input#q1(name='q1', type='text')
+                        button.submit(type='submit') Send answers
+                        .controls
+                          button.next
+                          .progress
+                          span.number
+                            span.number-current
+                            span.number-total
+                          span.error-message
+                      span.final-message
+            footer
+                ul
+                    li.facebook
+                        a(href='https://www.facebook.com/getbounceapp')
+                            img(src='/static/images/facebook.png')
+                    li.angellist
+                        a(href='https://angel.co/bounce-7')
+                            img(src='/static/images/angellist.png')
+                    li.twitter
+                        a(href='https://twitter.com/getbouncehome')
+                            img(src='/static/images/twitter.png')
+        script(src='/static/js/classie.js')
+        script(src='/static/js/stepsForm.js')
+        script(src='/static/js/product.js')

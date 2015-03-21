@@ -66,7 +66,7 @@ def password_is_valid(password):
 
     return len(password) >= MINIMUM_PASSWORD_LENGTH
 
-@users_blueprint.route("/api/v1/users", methods=["POST"])
+@users_blueprint.route("/api/v1/users", methods=["PUT"])
 def create_user():
     """Creates a new user, if and only if the following criteria are satisfied:
     *   The username does not already exist.
@@ -87,17 +87,42 @@ def create_user():
             *   An HTTP header specifying the URI of the created user.
     """
 
+    DEV_BAD_USER_MSG = ("Username has inappropriate characters. "
+                        "The username must match the following regex: "
+                        "^(?![_.-])(?!.*[_.-]{2})[a-zA-Z0-9._-]+(?<![_.-])$. "
+                        "That is, the allowed characters are alphanumeric, "
+                        "with {., _, -} allowed in the middle of the string.")
+
+    USER_BAD_USER_MSG = ("The username has inappropriate characters. "
+                         "Please use numbers, letters, underscores, and "
+                         "hyphens.")
+
+    DEV_USERNAME_TAKEN_MSG = ("The username has already been taken.")
+
+    USER_USERNAME_TAKEN_MSG = ("Sorry! Looks like someone got that awesome username "
+                               "before you. Try again.")
+
+    DEV_BAD_PASS_MSG = ("The password was not a minimum of 8 characters.")
+
+    USER_BAD_PASS_MSG = ("Your password is weak. Try something a bit longer.")
+
     username = request.form["username"]
     password = request.form["password"]
 
     if not username_is_valid(username):
-        return (jsonify({"Error": "Username has the inappropriate characters."}),
+        return (jsonify(status=400,
+                        developer_message=DEV_BAD_USER_MSG,
+                        user_message=USER_BAD_USER_MSG),
                 400)
     elif not username_available(username):
-        return (jsonify({"Error": "Username is already taken."}),
+        return (jsonify(status=400,
+                        developer_message=DEV_USERNAME_TAKEN_MSG,
+                        user_message=USER_USERNAME_TAKEN_MSG),
                 400)
     elif not password_is_valid(password):
-        return (jsonify({"Error": "Bad password."}),
+        return (jsonify(status=400,
+                        developer_message=DEV_BAD_PASS_MSG,
+                        user_message=USER_BAD_PASS_MSG),
                 400)
     else:
         pass_hash = generate_password_hash(password)
